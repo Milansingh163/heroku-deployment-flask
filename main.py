@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return 'Company Name: ABC \nCorporation Location: India \nContact Detail: 999-999-9999'
+    return 'Company Name: ABC <br>Corporation Location: India <br>Contact Detail: 999-999-9999'
 
 @app.route('/welcome')
 def welcome():
