@@ -4,14 +4,20 @@ import os
 
 app = Flask(__name__)
 
+@app.route('/')
+def home_page():
+    return '''  Company Name: ABC Corporation <br>
+                Location: India <br>
+                Contact Detail: 999-999-9999'''
+
 @app.route('/welcome')
 def welcome():
-    return 'Welcome to ABC Corporation'
+    return '<h1>Welcome to ABC Corporation</h1>'
 
 
 @app.route('/greet')
 def greet():
-    return 'HELLO WORLD'
+    return 'Hello World !!'
 
 
 @app.route('/name')
