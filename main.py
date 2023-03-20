@@ -4,10 +4,15 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/')
-@app.route('/home')
-def hello_world():
-    return 'This is my home page'
+@app.route('/welcome')
+def welcome():
+    return 'Welcome to ABC Corporation'
+
+
+@app.route('/greet')
+def greet():
+    return 'HELLO WORLD'
+
 
 @app.route('/name')
 def get_name():
