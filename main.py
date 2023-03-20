@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+import os
 
 app = Flask(__name__)
 
@@ -15,5 +16,4 @@ def get_name():
 
 
 if __name__ =='__main__':
-    app.debug=True
-    app.run(host='localhost',port=5000)
+     app.run(debug=True, port=os.getenv("PORT", default=5000))
